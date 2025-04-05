@@ -40,7 +40,8 @@ public class BenchmarkRunner {
         List<String> classNames = Arrays.asList(
             "SearchByContains",
             "SearchByManualLoop",
-            "SearchByRegex"
+            "SearchByRegex",
+            "SearchByArray"
         );
         
         List<String> data = load();
