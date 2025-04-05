@@ -19,6 +19,8 @@ public class MakeTestData {
 
     public static void main(String [] args) throws Exception {
             Random random = new Random();
+            random.setSeed(0); // Reproducibility
+
             StringBuilder sb = new StringBuilder();
             try(FileWriter fw = new FileWriter("test_data.out")) {
                     for (int i = 0; i < NUM_WORDS; i++) {
