@@ -41,7 +41,11 @@ public class BenchmarkRunner {
             "SearchByContains",
             "SearchByManualLoop",
             "SearchByRegex",
-            "SearchByArray"
+            "SearchByArray",
+            "SearchByStream",
+            "SearchByParallelStream",
+            "SearchByLineStream",
+            "SearchByLineCPStream"
         );
         
         List<String> data = load();
