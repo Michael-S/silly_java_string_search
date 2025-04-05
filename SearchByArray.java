@@ -1,17 +1,19 @@
 import java.util.*;
 
-public class SearchByManualLoop {
-
-        static final char cpQuote = '\"';
-        static final char cpComma = ',';
-        static final char cpCr = '\r';
-        static final char cpNl = '\n';
-
+public class SearchByArray {
         public static int count(List<String> data) {
                 int count = 0;
+
+                // Lookup tables my beloved
+                boolean[] match = new boolean[256];
+                match[','] = true;
+                match['\n'] = true;
+                match['\r'] = true;
+                match['\"'] = true;
+
                 for (String line : data) {
                         for (char c : line.toCharArray()) {
-                                if (c == cpQuote || c == cpComma || c == cpCr || c == cpNl) {
+                                if (c < 256 && match[c]) {
                                         count++;
                                         break;
                                 }
